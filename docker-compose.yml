@@ -1,0 +1,38 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     container_name: db
+     ports:
+       - "3306:3306"
+     volumes:
+       - ./mysql:/var/lib/mysql
+       - ./data:/docker-entrypoint-initdb.d
+       - ./scripts/wordpress:/var/www/html/scripts/wordpress
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     build: .
+     depends_on:
+       - db
+     volumes:
+       - ./src:/var/www/html
+     container_name: wordpress
+     ports:
+       - "443:443"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+       WORDPRESS_DB_NAME: wordpress
+       WORDPRESS_TABLE_PREFIX: rcdow_
+       WORDPRESS_DEBUG: 'true'
+volumes: # this is where we tell Docker what to pay attention to
+      data: {}
