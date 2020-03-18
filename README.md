@@ -37,5 +37,5 @@ from within the var/www/html directory to get all the depedencies in place
 
 ## TODO ##
 
-- [x] Automated running of wp-init.sh script without needing to connect to container
-- [] Add script variables used in wp-init.sh to docker-compose.yml
+- [x] Add script variables used in wp-init.sh to docker-compose.yml 
+- [ ] Automated running of wp-init.sh script without needing to connect to container 
