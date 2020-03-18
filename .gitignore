@@ -1,6 +1,7 @@
 .idea/
 data/*.sql.gz
-downloads/
+migration/uploads/*
+migration/themes/*
 mysql/*
 *.log
 .DS_Store
