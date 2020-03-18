@@ -1,7 +1,7 @@
 .idea/
 data/*.sql.gz
 migration/uploads/*
-migration/themes/*
+migration/themes/**
 mysql/*
 *.log
 .DS_Store

@@ -8,7 +8,6 @@
         }
     ],
     "require": {
-        "wpackagist-plugin/all-in-one-event-calendar": "2.6.2",
         "wpackagist-plugin/better-wp-security": "7.6.1",
         "wpackagist-plugin/bible-verse-of-the-day": "2.6",
         "wpackagist-plugin/breadcrumb-navxt": "6.4.0",
@@ -26,10 +25,5 @@
         "wpackagist-plugin/wordpress-seo": "13.2",
         "wpackagist-plugin/wp-google-maps": "8.0.20",
         "wpackagist-plugin/wpcf7-recaptcha": "1.2.4"
-    },
-    "autoload": {
-        "psr-0": {
-            "Acme": "src/"
-        }
     }
 }
